@@ -7,15 +7,36 @@
 //
 
 import UIKit
-
+// 1. Add the ESTBeaconManagerDelegate protocol
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate {
 
     var window: UIWindow?
+    // 2. Add a property to hold the beacon manager and instantiate it
+    let beaconManager = ESTBeaconManager()
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        // 3. Set the beacon manager's delegate
+        self.beaconManager.delegate = self
+        
+        //4.  request the authorization
+        self.beaconManager.requestAlwaysAuthorization()
+        
+        //5. Start monitoring
+        self.beaconManager.startMonitoringForRegion(CLBeaconRegion(
+            proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!,
+            major: 33557, minor: 2842, identifier: "monitored region"))
+        
+
+        
+        
+        //7. Request to show notifications
+        UIApplication.sharedApplication().registerUserNotificationSettings(
+            UIUserNotificationSettings(forTypes: .Alert, categories: nil))
+        
+
+        
         return true
     }
 
@@ -27,6 +48,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        //6. add a notification to show up whenever user enters the range of our monitored beacon. TODO: broken
+        func beaconManager(manager: AnyObject, didEnterRegion region: CLBeaconRegion) {
+            let notification = UILocalNotification()
+            notification.alertBody =
+                "This is a notifications which appears when" +
+                "the user enters to beacons region." +
+                "It's shown as a notification because it can be seen in the background" +
+            "even when the phone is locked"
+            UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+        }
+        
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
