@@ -25,6 +25,8 @@
 		5713E5401CBB8DB300AEB69B /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713E53A1CBB8DB300AEB69B /* Beacon.swift */; };
 		5713E5411CBB8DB300AEB69B /* Area+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713E53B1CBB8DB300AEB69B /* Area+CoreDataProperties.swift */; };
 		5713E5421CBB8DB300AEB69B /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713E53C1CBB8DB300AEB69B /* Area.swift */; };
+		6ACE0E531CBFC13D007A6B11 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACE0E521CBFC13D007A6B11 /* TimeManager.swift */; };
+		6ACE0E551CBFCDE5007A6B11 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACE0E541CBFCDE5007A6B11 /* DateManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		5713E53A1CBB8DB300AEB69B /* Beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
 		5713E53B1CBB8DB300AEB69B /* Area+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Area+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5713E53C1CBB8DB300AEB69B /* Area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		6ACE0E521CBFC13D007A6B11 /* TimeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
+		6ACE0E541CBFCDE5007A6B11 /* DateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,8 @@
 				570859711CBA902E001A31F2 /* Assets.xcassets */,
 				570859731CBA902E001A31F2 /* LaunchScreen.storyboard */,
 				570859761CBA902E001A31F2 /* Info.plist */,
+				6ACE0E521CBFC13D007A6B11 /* TimeManager.swift */,
+				6ACE0E541CBFCDE5007A6B11 /* DateManager.swift */,
 			);
 			path = Kiasmapp;
 			sourceTree = "<group>";
@@ -231,11 +237,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = "Juhani Lavonen";
+				ORGANIZATIONNAME = "Alex Lindroos";
 				TargetAttributes = {
 					570859641CBA902E001A31F2 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 6G2KR88UP5;
+						DevelopmentTeam = Q962J6X3Y6;
 					};
 					5708597A1CBA902F001A31F2 = {
 						CreatedOnToolsVersion = 7.3;
@@ -302,10 +308,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5713E5421CBB8DB300AEB69B /* Area.swift in Sources */,
+				6ACE0E551CBFCDE5007A6B11 /* DateManager.swift in Sources */,
 				5713E53F1CBB8DB300AEB69B /* Beacon+CoreDataProperties.swift in Sources */,
 				5708596D1CBA902E001A31F2 /* SecondViewController.swift in Sources */,
 				570859691CBA902E001A31F2 /* AppDelegate.swift in Sources */,
 				5713E53E1CBB8DB300AEB69B /* User.swift in Sources */,
+				6ACE0E531CBFC13D007A6B11 /* TimeManager.swift in Sources */,
 				5708596B1CBA902E001A31F2 /* FirstViewController.swift in Sources */,
 				5713E53D1CBB8DB300AEB69B /* User+CoreDataProperties.swift in Sources */,
 				5713E5411CBB8DB300AEB69B /* Area+CoreDataProperties.swift in Sources */,
@@ -454,14 +462,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Kiasmapp",
 				);
 				INFOPLIST_FILE = Kiasmapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ProjectJuhani.Kiasmapp;
+				PRODUCT_BUNDLE_IDENTIFIER = ProjectAlex.Kiasmapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
 			};
 			name = Debug;
@@ -470,14 +481,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Kiasmapp",
 				);
 				INFOPLIST_FILE = Kiasmapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ProjectJuhani.Kiasmapp;
+				PRODUCT_BUNDLE_IDENTIFIER = ProjectAlex.Kiasmapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
 			};
 			name = Release;

@@ -2,28 +2,38 @@
 //  FirstViewController.swift
 //  Kiasmapp
 //
-//  Created by Juhani Lavonen on 10.4.2016.
-//  Copyright © 2016 Juhani Lavonen. All rights reserved.
+//  Created by 2 and 1/2 men on 10.4.2016.
+//  Copyright © 2016 2 and 1/2 men All rights reserved.
 //
-
 import UIKit
+import CoreLocation
 
 // 1. Add the ESTBeaconManagerDelegate protocol
-class FirstViewController: UIViewController, ESTBeaconManagerDelegate {
+class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
+    
+    @IBOutlet weak var timeLabel: UILabel!
     
     // 2. Add the beacon manager and the beacon region
     let beaconManager = ESTBeaconManager()
     let beaconRegion = CLBeaconRegion(
-        proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!,
+        proximityUUID: NSUUID(UUIDString: "D89ACCA5-F0FD-A90A-29D6-AF6A1E61EF63")!,
         identifier: "ranged region")
+    var counter = 0
+    var timer = NSTimer()
+  
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // 3. Set the beacon manager's delegate
         self.beaconManager.delegate = self
+     //   self.locationManager.delegate = self
         // 4. We need to request this authorization for every beacon manager
         self.beaconManager.requestAlwaysAuthorization()
+     //   self.locationManager.requestAlwaysAuthorization()
         // Now, the code to start and stop ranging as the view controller appears and disappears on screen.
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,12 +46,18 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.beaconManager.startRangingBeaconsInRegion(self.beaconRegion)
+        self.beaconManager.startMonitoringForRegion(self.beaconRegion)
     }
     
     // 6. View did disappear
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
         self.beaconManager.stopRangingBeaconsInRegion(self.beaconRegion)
+        self.beaconManager.stopMonitoringForRegion(self.beaconRegion)
+        timer.invalidate()
+        print("sammui viewDidDisappearissa")
+        counter = 0
+        timeLabel.text = String(counter)
     }
     
     // 7. Placeholder data for beacon
@@ -49,11 +65,8 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate {
     // TODO: replace "<major>:<minor>" strings to match your own beacons
     let placesByBeacons = [
         "33557:2842": [
-            "Heavenly Sandwiches": 50, // read as: it's 50 meters from
-            // "Heavenly Sandwiches" to the beacon with
-            // major 6574 and minor 54631
-            "Green & Green Salads": 150,
-            "Mini Panini": 325
+            "first": 50, // read as: it's 50 meters from
+            "second": 325
         ]
     ]
     
@@ -70,6 +83,7 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate {
     //9. Ranging delegate
     func beaconManager(manager: AnyObject, didRangeBeacons beacons: [CLBeacon],
                        inRegion region: CLBeaconRegion) {
+        print("This many beacons in region: \(beacons.count)")
         if let nearestBeacon = beacons.first {
             let places = placesNearBeacon(nearestBeacon)
             // TODO: update the UI here and the tableView
@@ -77,14 +91,10 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate {
             print(nearestBeacon.accuracy)
         }
     }
+ //timer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: #selector(FirstViewController.updateCounter), userInfo: nil, repeats: true)
+    
+   
     
     
-
-
-    
-    
-
-
-
 }
 

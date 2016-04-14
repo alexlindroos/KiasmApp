@@ -2,19 +2,26 @@
 //  AppDelegate.swift
 //  Kiasmapp
 //
-//  Created by Juhani Lavonen on 10.4.2016.
-//  Copyright © 2016 Juhani Lavonen. All rights reserved.
+//  Created by 2 and 1/2 men on 10.4.2016.
+//  Copyright © 2016 2 and 1/2 men All rights reserved.
 //
 
 import UIKit
 // 1. Add the ESTBeaconManagerDelegate protocol
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate {
-
+ 
+  
+    
     var window: UIWindow?
+    
+   
     // 2. Add a property to hold the beacon manager and instantiate it
     let beaconManager = ESTBeaconManager()
-
+    let timer = TimeManager()
+    let date = DateManager()
+    var visitTime = 0
+    var arriveDate = ""
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // 3. Set the beacon manager's delegate
@@ -25,19 +32,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
         
         //5. Start monitoring
         self.beaconManager.startMonitoringForRegion(CLBeaconRegion(
-            proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!,
+            proximityUUID: NSUUID(UUIDString: "D89ACCA5-F0FD-A90A-29D6-AF6A1E61EF63")!,
             major: 33557, minor: 2842, identifier: "monitored region"))
-        
-
         
         
         //7. Request to show notifications
         UIApplication.sharedApplication().registerUserNotificationSettings(
             UIUserNotificationSettings(forTypes: .Alert, categories: nil))
-        
 
-        
         return true
+    }
+    
+    func beaconManager(manager: AnyObject, didEnterRegion region: CLBeaconRegion) {
+        print("HELLO YOU HAVE ENTERED THE REGION")
+        
+       // var arriveDate = date.currentDate()
+        
+        print("Current date: \(date.currentDate())")
+        
+        /*timer.startTimer()
+        print("This is when it's running \(timer.updateCounter())") */
+    }
+    
+    func beaconManager(manager: AnyObject, didExitRegion region: CLBeaconRegion) {
+        print("GOODBYE YOU LEFT THE REGION")
+        
+        
+        
+        print("Leave date: \(date.currentDate())")
+        
+        /*visitTime = timer.stopTimer()
+        print("This is when it stopped \( timer.stopTimer())")
+        print("User visited this room \(visitTime) seconds")
+        print("resetting timer \(timer.resetTimer())")*/
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -58,8 +85,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
             "even when the phone is locked"
             UIApplication.sharedApplication().presentLocalNotificationNow(notification)
         }
-        
     }
+    
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
