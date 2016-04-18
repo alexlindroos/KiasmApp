@@ -27,6 +27,7 @@
 		5713E5421CBB8DB300AEB69B /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713E53C1CBB8DB300AEB69B /* Area.swift */; };
 		6ACE0E531CBFC13D007A6B11 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACE0E521CBFC13D007A6B11 /* TimeManager.swift */; };
 		6ACE0E551CBFCDE5007A6B11 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACE0E541CBFCDE5007A6B11 /* DateManager.swift */; };
+		6ACE0E591CC10DD0007A6B11 /* IconChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACE0E581CC10DD0007A6B11 /* IconChanger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		5713E53C1CBB8DB300AEB69B /* Area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		6ACE0E521CBFC13D007A6B11 /* TimeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
 		6ACE0E541CBFCDE5007A6B11 /* DateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		6ACE0E581CC10DD0007A6B11 /* IconChanger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconChanger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				5713E5341CBB8AB200AEB69B /* Model.xcdatamodeld */,
 				570859681CBA902E001A31F2 /* AppDelegate.swift */,
 				5708596A1CBA902E001A31F2 /* FirstViewController.swift */,
+				6ACE0E581CC10DD0007A6B11 /* IconChanger.swift */,
 				5713E5431CBB8DB800AEB69B /* Data Model */,
 				5708599D1CBA91E9001A31F2 /* ObjCBridge.h */,
 				5708596C1CBA902E001A31F2 /* SecondViewController.swift */,
@@ -318,6 +321,7 @@
 				5713E53D1CBB8DB300AEB69B /* User+CoreDataProperties.swift in Sources */,
 				5713E5411CBB8DB300AEB69B /* Area+CoreDataProperties.swift in Sources */,
 				5713E5361CBB8AB200AEB69B /* Model.xcdatamodeld in Sources */,
+				6ACE0E591CC10DD0007A6B11 /* IconChanger.swift in Sources */,
 				5713E5401CBB8DB300AEB69B /* Beacon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

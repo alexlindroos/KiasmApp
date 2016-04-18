@@ -9,11 +9,22 @@
 import Foundation
 
 class DateManager: NSDate{
-    
-    
+   
     func currentDate() -> String {
      return String(NSDate())
     }
     
+    func arriveDate() -> NSDate {
+        return NSDate()
+    }
+    
+    func leaveDate() -> NSDate {
+        return NSDate()
+    }
 
+    override func timeIntervalSinceDate(anotherDate: NSDate) -> NSTimeInterval{
+        return Double(NSTimeInterval())
+    }
+    
 }
+

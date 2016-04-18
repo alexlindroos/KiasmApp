@@ -11,29 +11,33 @@ import CoreLocation
 // 1. Add the ESTBeaconManagerDelegate protocol
 class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
     
-    @IBOutlet weak var timeLabel: UILabel!
+    
+    @IBOutlet weak var beaconIcon: UIImageView!
+    
+    
+    @IBOutlet weak var infoButton: UIButton!
+    
     
     // 2. Add the beacon manager and the beacon region
     let beaconManager = ESTBeaconManager()
     let beaconRegion = CLBeaconRegion(
         proximityUUID: NSUUID(UUIDString: "D89ACCA5-F0FD-A90A-29D6-AF6A1E61EF63")!,
         identifier: "ranged region")
-    var counter = 0
-    var timer = NSTimer()
-  
-  
+    
+    
+    let iconChanger = IconChanger()
+   
+    
+    
+      
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // 3. Set the beacon manager's delegate
         self.beaconManager.delegate = self
-     //   self.locationManager.delegate = self
+     
         // 4. We need to request this authorization for every beacon manager
         self.beaconManager.requestAlwaysAuthorization()
-     //   self.locationManager.requestAlwaysAuthorization()
-        // Now, the code to start and stop ranging as the view controller appears and disappears on screen.
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,15 +58,9 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
         super.viewDidDisappear(animated)
         self.beaconManager.stopRangingBeaconsInRegion(self.beaconRegion)
         self.beaconManager.stopMonitoringForRegion(self.beaconRegion)
-        timer.invalidate()
-        print("sammui viewDidDisappearissa")
-        counter = 0
-        timeLabel.text = String(counter)
     }
     
     // 7. Placeholder data for beacon
-    // Add the property holding the data.
-    // TODO: replace "<major>:<minor>" strings to match your own beacons
     let placesByBeacons = [
         "33557:2842": [
             "first": 50, // read as: it's 50 meters from
@@ -86,15 +84,35 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
         print("This many beacons in region: \(beacons.count)")
         if let nearestBeacon = beacons.first {
             let places = placesNearBeacon(nearestBeacon)
-            // TODO: update the UI here and the tableView
-            print(places) // TODO: remove after implementing the UI
+        
+            print(places)
             print(nearestBeacon.accuracy)
+            
+            if(nearestBeacon.accuracy < 3 && nearestBeacon.accuracy > -1){
+                
+                
+                beaconIcon.image = UIImage(named:"visited")
+                infoButton.hidden = false
+            }
         }
+        
+     
     }
- //timer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: #selector(FirstViewController.updateCounter), userInfo: nil, repeats: true)
+            
+            
+    
+    
+       /* func changeIcon(){
+            if iconChanger.tellState() == true {
+                beaconIcon.image = UIImage(named:"visited")
+                infoButton.hidden = true;
+        }*/
+    }
+
+
     
    
     
     
-}
+
 

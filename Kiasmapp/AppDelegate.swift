@@ -11,17 +11,22 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate {
  
-  
     
     var window: UIWindow?
     
-   
+    
     // 2. Add a property to hold the beacon manager and instantiate it
     let beaconManager = ESTBeaconManager()
     let timer = TimeManager()
     let date = DateManager()
+    let iconChanger = IconChanger()
+
+    
     var visitTime = 0
-    var arriveDate = ""
+    
+    var tuloAika = NSDate()
+    
+   
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // 3. Set the beacon manager's delegate
@@ -46,25 +51,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
     func beaconManager(manager: AnyObject, didEnterRegion region: CLBeaconRegion) {
         print("HELLO YOU HAVE ENTERED THE REGION")
         
-       // var arriveDate = date.currentDate()
+        let time1 = date.currentDate()
         
-        print("Current date: \(date.currentDate())")
+        tuloAika = NSDate()
         
-        /*timer.startTimer()
-        print("This is when it's running \(timer.updateCounter())") */
+        print("Current date: \(time1)")
+        
+        
+        iconChanger.changeIconToVisited()
+
+        
+        
+        
     }
     
     func beaconManager(manager: AnyObject, didExitRegion region: CLBeaconRegion) {
         print("GOODBYE YOU LEFT THE REGION")
         
+        let time2 = date.currentDate()
         
+        print("Leave date: \(time2)")
         
-        print("Leave date: \(date.currentDate())")
+        var kulunutAika = NSDate().timeIntervalSinceDate(tuloAika)
         
-        /*visitTime = timer.stopTimer()
-        print("This is when it stopped \( timer.stopTimer())")
-        print("User visited this room \(visitTime) seconds")
-        print("resetting timer \(timer.resetTimer())")*/
+        var tulos = Int(kulunutAika)
+        
+        print("User visited here \(tulos) seconds")
+        
+     
     }
 
     func applicationWillResignActive(application: UIApplication) {
