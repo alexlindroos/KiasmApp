@@ -10,16 +10,75 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-
+    @IBOutlet weak var imageView: UIImageView!
+   
+    @IBOutlet weak var imageView2: UIImageView!
+    
+    @IBOutlet weak var textView: UITextView!
+    
+    @IBOutlet weak var textView2: UITextView!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        load_image1("http://users.metropolia.fi/~juhanivl/Project/Domingo.jpg")
+        load_image2("http://users.metropolia.fi/~juhanivl/Project/Rosary.jpg")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
+    func load_image1(urlString:String)
+    {
+        let imgURL: NSURL = NSURL(string: urlString)!
+        let request: NSURLRequest = NSURLRequest(URL: imgURL)
+        
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithRequest(request){
+            (data, response, error) -> Void in
+            
+            if (error == nil && data != nil)
+            {
+                func display_image()
+                {
+                    self.imageView.image = UIImage(data: data!)
+                }
+                
+                dispatch_async(dispatch_get_main_queue(), display_image)
+            }
+            
+        }
+        
+        task.resume()
     }
+    
+    func load_image2(urlString:String)
+    {
+        let imgURL: NSURL = NSURL(string: urlString)!
+        let request: NSURLRequest = NSURLRequest(URL: imgURL)
+        
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithRequest(request){
+            (data, response, error) -> Void in
+            
+            if (error == nil && data != nil)
+            {
+                func display_image()
+                {
+                    self.imageView2.image = UIImage(data: data!)
+                }
+                
+                dispatch_async(dispatch_get_main_queue(), display_image)
+            }
+            
+        }
+        
+        task.resume()
+    }
+
+
+}
 
