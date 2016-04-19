@@ -30,6 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // 3. Set the beacon manager's delegate
+        
+        //Makes launchscreen last bit longer
+        NSThread.sleepForTimeInterval(3)
+       
+    
         self.beaconManager.delegate = self
         
         //4.  request the authorization

@@ -21,6 +21,7 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //Load images from url
         load_image1("http://users.metropolia.fi/~juhanivl/Project/Domingo.jpg")
         load_image2("http://users.metropolia.fi/~juhanivl/Project/Rosary.jpg")
     }
@@ -31,6 +32,8 @@ class SecondViewController: UIViewController {
     }
     
 
+      //FUNCTION: LOAD IMAGE TO FIRST IMAGEVIEW
+    
     func load_image1(urlString:String)
     {
         let imgURL: NSURL = NSURL(string: urlString)!
@@ -54,6 +57,8 @@ class SecondViewController: UIViewController {
         
         task.resume()
     }
+    
+    //FUNCTION: LOAD IMAGE TO SECOND IMAGEVIEW
     
     func load_image2(urlString:String)
     {

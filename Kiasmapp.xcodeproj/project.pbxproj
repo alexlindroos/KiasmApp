@@ -25,6 +25,7 @@
 		5713E5401CBB8DB300AEB69B /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713E53A1CBB8DB300AEB69B /* Beacon.swift */; };
 		5713E5411CBB8DB300AEB69B /* Area+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713E53B1CBB8DB300AEB69B /* Area+CoreDataProperties.swift */; };
 		5713E5421CBB8DB300AEB69B /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713E53C1CBB8DB300AEB69B /* Area.swift */; };
+		6AC291FB1CC64B3A000FC759 /* MyBigHeartDemo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AC291FA1CC64B3A000FC759 /* MyBigHeartDemo.ttf */; };
 		6ACE0E531CBFC13D007A6B11 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACE0E521CBFC13D007A6B11 /* TimeManager.swift */; };
 		6ACE0E551CBFCDE5007A6B11 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACE0E541CBFCDE5007A6B11 /* DateManager.swift */; };
 		6ACE0E591CC10DD0007A6B11 /* IconChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACE0E581CC10DD0007A6B11 /* IconChanger.swift */; };
@@ -71,6 +72,7 @@
 		5713E53A1CBB8DB300AEB69B /* Beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
 		5713E53B1CBB8DB300AEB69B /* Area+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Area+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5713E53C1CBB8DB300AEB69B /* Area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		6AC291FA1CC64B3A000FC759 /* MyBigHeartDemo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MyBigHeartDemo.ttf; sourceTree = "<group>"; };
 		6ACE0E521CBFC13D007A6B11 /* TimeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
 		6ACE0E541CBFCDE5007A6B11 /* DateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		6ACE0E581CC10DD0007A6B11 /* IconChanger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconChanger.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		570859671CBA902E001A31F2 /* Kiasmapp */ = {
 			isa = PBXGroup;
 			children = (
+				6AC291FA1CC64B3A000FC759 /* MyBigHeartDemo.ttf */,
 				5713E5341CBB8AB200AEB69B /* Model.xcdatamodeld */,
 				570859681CBA902E001A31F2 /* AppDelegate.swift */,
 				5708596A1CBA902E001A31F2 /* FirstViewController.swift */,
@@ -285,6 +288,7 @@
 			files = (
 				570859751CBA902E001A31F2 /* LaunchScreen.storyboard in Resources */,
 				570859721CBA902E001A31F2 /* Assets.xcassets in Resources */,
+				6AC291FB1CC64B3A000FC759 /* MyBigHeartDemo.ttf in Resources */,
 				570859701CBA902E001A31F2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
