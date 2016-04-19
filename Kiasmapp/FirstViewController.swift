@@ -27,8 +27,14 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
     
     let iconChanger = IconChanger()
    
+    let networkOperator = NetworkOperator()
     
     
+    @IBAction func getAreaData(sender: AnyObject) {
+        
+        networkOperator.getAreaData()
+        
+    }
       
 
     override func viewDidLoad() {

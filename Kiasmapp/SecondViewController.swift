@@ -30,7 +30,7 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+      
 
       //FUNCTION: LOAD IMAGE TO FIRST IMAGEVIEW
     
@@ -65,7 +65,7 @@ class SecondViewController: UIViewController {
         let imgURL: NSURL = NSURL(string: urlString)!
         let request: NSURLRequest = NSURLRequest(URL: imgURL)
         
-        let session = NSURLSession.sharedSession()
+         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithRequest(request){
             (data, response, error) -> Void in
             

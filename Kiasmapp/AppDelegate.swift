@@ -63,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
         print("Current date: \(time1)")
         
         
-        iconChanger.changeIconToVisited()
+        //iconChanger.changeIconToVisited()
 
         
         
