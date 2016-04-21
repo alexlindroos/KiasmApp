@@ -2,8 +2,9 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
     <entity name="Area" representedClassName=".Area" syncable="YES">
         <attribute name="areaID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="information" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="areaInfo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="areaName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mapURL" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="beacon" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Beacon" inverseName="area" inverseEntity="Beacon" syncable="YES"/>
         <relationship name="user" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="area" inverseEntity="User" syncable="YES"/>
     </entity>
@@ -14,15 +15,21 @@
         <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="area" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Area" inverseName="beacon" inverseEntity="Area" syncable="YES"/>
     </entity>
+    <entity name="Product" syncable="YES">
+        <attribute name="artist" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="productInfo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="User" representedClassName=".User" syncable="YES">
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="userID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="uID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="area" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Area" inverseName="user" inverseEntity="Area" syncable="YES"/>
     </entity>
     <elements>
+        <element name="Area" positionX="-54" positionY="18" width="128" height="135"/>
         <element name="Beacon" positionX="-63" positionY="-18" width="128" height="120"/>
-        <element name="Area" positionX="-54" positionY="18" width="128" height="120"/>
-        <element name="User" positionX="-36" positionY="45" width="128" height="105"/>
+        <element name="User" positionX="-36" positionY="45" width="128" height="75"/>
+        <element name="Product" positionX="-54" positionY="54" width="128" height="120"/>
     </elements>
 </model>

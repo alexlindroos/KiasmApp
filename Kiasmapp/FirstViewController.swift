@@ -31,9 +31,7 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
     
     
     @IBAction func getAreaData(sender: AnyObject) {
-        
         networkOperator.getAreaData()
-        
     }
       
 
