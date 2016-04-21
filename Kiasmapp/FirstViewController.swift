@@ -13,6 +13,7 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
     
     
     @IBOutlet weak var beaconIcon: UIImageView!
+    @IBOutlet weak var areaMap: UIImageView!
     
     
     @IBOutlet weak var infoButton: UIButton!
@@ -29,12 +30,6 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
    
     let networkOperator = NetworkOperator()
     
-    
-    @IBAction func getAreaData(sender: AnyObject) {
-        networkOperator.getAreaData()
-    }
-      
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // 3. Set the beacon manager's delegate
@@ -42,6 +37,8 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
      
         // 4. We need to request this authorization for every beacon manager
         self.beaconManager.requestAlwaysAuthorization()
+        
+        networkOperator.getAreaData()
     }
 
     override func didReceiveMemoryWarning() {

@@ -23,7 +23,7 @@ class NetworkOperator: NSURLSession{
         //UI
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         
-        let url = NSURL(string: "http://10.112.194.193:8080/Kiasmapp-backEnd/webresources/Area")
+        let url = NSURL(string: "http://10.112.212.52:8080/Kiasmapp-backEnd/webresources/Area")
         
         dataTask = defautlSession.dataTaskWithURL(url!){
             data, response, error in
@@ -38,6 +38,8 @@ class NetworkOperator: NSURLSession{
                     print("statuscode oli 200")
                     print(data)
                     print(response)
+                    let parser = Parser()
+                    parser.parse(data!)
                     
                     
                 }

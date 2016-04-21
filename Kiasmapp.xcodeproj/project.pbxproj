@@ -19,15 +19,17 @@
 		5708599B1CBA9123001A31F2 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570859991CBA9123001A31F2 /* EstimoteSDK.framework */; };
 		5708599C1CBA9123001A31F2 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570859991CBA9123001A31F2 /* EstimoteSDK.framework */; };
 		5713E5361CBB8AB200AEB69B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5713E5341CBB8AB200AEB69B /* Model.xcdatamodeld */; };
-		5713E53D1CBB8DB300AEB69B /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713E5371CBB8DB300AEB69B /* User+CoreDataProperties.swift */; };
-		5713E53E1CBB8DB300AEB69B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713E5381CBB8DB300AEB69B /* User.swift */; };
-		5713E53F1CBB8DB300AEB69B /* Beacon+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713E5391CBB8DB300AEB69B /* Beacon+CoreDataProperties.swift */; };
-		5713E5401CBB8DB300AEB69B /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713E53A1CBB8DB300AEB69B /* Beacon.swift */; };
-		5713E5411CBB8DB300AEB69B /* Area+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713E53B1CBB8DB300AEB69B /* Area+CoreDataProperties.swift */; };
-		5713E5421CBB8DB300AEB69B /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713E53C1CBB8DB300AEB69B /* Area.swift */; };
-		579800F11CC8AB3E0045C77B /* AreaParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579800F01CC8AB3E0045C77B /* AreaParser.swift */; };
 		6AC291FB1CC64B3A000FC759 /* MyBigHeartDemo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AC291FA1CC64B3A000FC759 /* MyBigHeartDemo.ttf */; };
 		6AC291FD1CC66A5D000FC759 /* NetworkOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC291FC1CC66A5D000FC759 /* NetworkOperator.swift */; };
+		6AC292011CC8BAE3000FC759 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC292001CC8BAE3000FC759 /* Parser.swift */; };
+		6AC292491CC8CCA1000FC759 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC292411CC8CCA1000FC759 /* Product+CoreDataProperties.swift */; };
+		6AC2924A1CC8CCA1000FC759 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC292421CC8CCA1000FC759 /* Product.swift */; };
+		6AC2924B1CC8CCA1000FC759 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC292431CC8CCA1000FC759 /* User+CoreDataProperties.swift */; };
+		6AC2924C1CC8CCA1000FC759 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC292441CC8CCA1000FC759 /* User.swift */; };
+		6AC2924D1CC8CCA1000FC759 /* Area+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC292451CC8CCA1000FC759 /* Area+CoreDataProperties.swift */; };
+		6AC2924E1CC8CCA1000FC759 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC292461CC8CCA1000FC759 /* Area.swift */; };
+		6AC2924F1CC8CCA1000FC759 /* Beacon+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC292471CC8CCA1000FC759 /* Beacon+CoreDataProperties.swift */; };
+		6AC292501CC8CCA1000FC759 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC292481CC8CCA1000FC759 /* Beacon.swift */; };
 		6ACE0E531CBFC13D007A6B11 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACE0E521CBFC13D007A6B11 /* TimeManager.swift */; };
 		6ACE0E551CBFCDE5007A6B11 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACE0E541CBFCDE5007A6B11 /* DateManager.swift */; };
 		6ACE0E591CC10DD0007A6B11 /* IconChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACE0E581CC10DD0007A6B11 /* IconChanger.swift */; };
@@ -68,15 +70,17 @@
 		570859991CBA9123001A31F2 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
 		5708599D1CBA91E9001A31F2 /* ObjCBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
 		5713E5351CBB8AB200AEB69B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		5713E5371CBB8DB300AEB69B /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		5713E5381CBB8DB300AEB69B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		5713E5391CBB8DB300AEB69B /* Beacon+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Beacon+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		5713E53A1CBB8DB300AEB69B /* Beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
-		5713E53B1CBB8DB300AEB69B /* Area+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Area+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		5713E53C1CBB8DB300AEB69B /* Area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
-		579800F01CC8AB3E0045C77B /* AreaParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaParser.swift; sourceTree = "<group>"; };
 		6AC291FA1CC64B3A000FC759 /* MyBigHeartDemo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MyBigHeartDemo.ttf; sourceTree = "<group>"; };
 		6AC291FC1CC66A5D000FC759 /* NetworkOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperator.swift; sourceTree = "<group>"; };
+		6AC292001CC8BAE3000FC759 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		6AC292411CC8CCA1000FC759 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Product+CoreDataProperties.swift"; path = "../Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6AC292421CC8CCA1000FC759 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Product.swift; path = ../Product.swift; sourceTree = "<group>"; };
+		6AC292431CC8CCA1000FC759 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "../User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6AC292441CC8CCA1000FC759 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../User.swift; sourceTree = "<group>"; };
+		6AC292451CC8CCA1000FC759 /* Area+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Area+CoreDataProperties.swift"; path = "../Area+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6AC292461CC8CCA1000FC759 /* Area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Area.swift; path = ../Area.swift; sourceTree = "<group>"; };
+		6AC292471CC8CCA1000FC759 /* Beacon+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Beacon+CoreDataProperties.swift"; path = "../Beacon+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6AC292481CC8CCA1000FC759 /* Beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Beacon.swift; path = ../Beacon.swift; sourceTree = "<group>"; };
 		6ACE0E521CBFC13D007A6B11 /* TimeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
 		6ACE0E541CBFCDE5007A6B11 /* DateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		6ACE0E581CC10DD0007A6B11 /* IconChanger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconChanger.swift; sourceTree = "<group>"; };
@@ -134,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				6AC291FA1CC64B3A000FC759 /* MyBigHeartDemo.ttf */,
-				579800F01CC8AB3E0045C77B /* AreaParser.swift */,
 				5713E5341CBB8AB200AEB69B /* Model.xcdatamodeld */,
 				570859681CBA902E001A31F2 /* AppDelegate.swift */,
 				5708596A1CBA902E001A31F2 /* FirstViewController.swift */,
@@ -150,6 +153,7 @@
 				6ACE0E521CBFC13D007A6B11 /* TimeManager.swift */,
 				6ACE0E541CBFCDE5007A6B11 /* DateManager.swift */,
 				6AC291FC1CC66A5D000FC759 /* NetworkOperator.swift */,
+				6AC292001CC8BAE3000FC759 /* Parser.swift */,
 			);
 			path = Kiasmapp;
 			sourceTree = "<group>";
@@ -175,12 +179,14 @@
 		5713E5431CBB8DB800AEB69B /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				5713E53C1CBB8DB300AEB69B /* Area.swift */,
-				5713E53B1CBB8DB300AEB69B /* Area+CoreDataProperties.swift */,
-				5713E53A1CBB8DB300AEB69B /* Beacon.swift */,
-				5713E5391CBB8DB300AEB69B /* Beacon+CoreDataProperties.swift */,
-				5713E5381CBB8DB300AEB69B /* User.swift */,
-				5713E5371CBB8DB300AEB69B /* User+CoreDataProperties.swift */,
+				6AC292411CC8CCA1000FC759 /* Product+CoreDataProperties.swift */,
+				6AC292421CC8CCA1000FC759 /* Product.swift */,
+				6AC292431CC8CCA1000FC759 /* User+CoreDataProperties.swift */,
+				6AC292441CC8CCA1000FC759 /* User.swift */,
+				6AC292451CC8CCA1000FC759 /* Area+CoreDataProperties.swift */,
+				6AC292461CC8CCA1000FC759 /* Area.swift */,
+				6AC292471CC8CCA1000FC759 /* Beacon+CoreDataProperties.swift */,
+				6AC292481CC8CCA1000FC759 /* Beacon.swift */,
 			);
 			name = "Data Model";
 			sourceTree = "<group>";
@@ -320,21 +326,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5713E5421CBB8DB300AEB69B /* Area.swift in Sources */,
+				6AC2924C1CC8CCA1000FC759 /* User.swift in Sources */,
+				6AC292491CC8CCA1000FC759 /* Product+CoreDataProperties.swift in Sources */,
 				6ACE0E551CBFCDE5007A6B11 /* DateManager.swift in Sources */,
-				579800F11CC8AB3E0045C77B /* AreaParser.swift in Sources */,
+				6AC2924B1CC8CCA1000FC759 /* User+CoreDataProperties.swift in Sources */,
+				6AC292011CC8BAE3000FC759 /* Parser.swift in Sources */,
+				6AC292501CC8CCA1000FC759 /* Beacon.swift in Sources */,
 				6AC291FD1CC66A5D000FC759 /* NetworkOperator.swift in Sources */,
-				5713E53F1CBB8DB300AEB69B /* Beacon+CoreDataProperties.swift in Sources */,
 				5708596D1CBA902E001A31F2 /* SecondViewController.swift in Sources */,
+				6AC2924A1CC8CCA1000FC759 /* Product.swift in Sources */,
 				570859691CBA902E001A31F2 /* AppDelegate.swift in Sources */,
-				5713E53E1CBB8DB300AEB69B /* User.swift in Sources */,
 				6ACE0E531CBFC13D007A6B11 /* TimeManager.swift in Sources */,
+				6AC2924E1CC8CCA1000FC759 /* Area.swift in Sources */,
+				6AC2924D1CC8CCA1000FC759 /* Area+CoreDataProperties.swift in Sources */,
 				5708596B1CBA902E001A31F2 /* FirstViewController.swift in Sources */,
-				5713E53D1CBB8DB300AEB69B /* User+CoreDataProperties.swift in Sources */,
-				5713E5411CBB8DB300AEB69B /* Area+CoreDataProperties.swift in Sources */,
+				6AC2924F1CC8CCA1000FC759 /* Beacon+CoreDataProperties.swift in Sources */,
 				5713E5361CBB8AB200AEB69B /* Model.xcdatamodeld in Sources */,
 				6ACE0E591CC10DD0007A6B11 /* IconChanger.swift in Sources */,
-				5713E5401CBB8DB300AEB69B /* Beacon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

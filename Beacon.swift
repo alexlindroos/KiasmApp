@@ -2,8 +2,8 @@
 //  Beacon.swift
 //  Kiasmapp
 //
-//  Created by Juhani Lavonen on 11.4.2016.
-//  Copyright © 2016 Juhani Lavonen. All rights reserved.
+//  Created by iosdev on 21.4.2016.
+//  Copyright © 2016 Alex Lindroos. All rights reserved.
 //
 
 import Foundation
