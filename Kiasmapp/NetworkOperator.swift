@@ -49,6 +49,8 @@ class NetworkOperator: NSURLSession{
         
     }
     
+
+    
     func postData(tulos:String){
         let request = NSMutableURLRequest()
    

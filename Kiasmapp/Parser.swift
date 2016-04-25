@@ -15,7 +15,6 @@ class Parser:NSObject, NSXMLParserDelegate {
     var currentString = ""
     var managedContext:NSManagedObjectContext?
     var thisArea:Area?
-    var thisProduct:Product?
     var appDelegate:AppDelegate?
     
     func parse (xmlData:NSData) {
@@ -43,11 +42,8 @@ class Parser:NSObject, NSXMLParserDelegate {
         print("found element: \(elementName)")
         
         if (elementName == "Area") {
-            print ("did start element Area \(currentString)")
+            print ("did start element student \(currentString)")
             thisArea = NSEntityDescription.insertNewObjectForEntityForName("Area", inManagedObjectContext: managedContext!) as? Area
-        }else if (elementName == "Product") {
-            print ("did start element Product \(currentString)")
-            thisProduct = NSEntityDescription.insertNewObjectForEntityForName("Product", inManagedObjectContext: managedContext!) as? Product
         }
     }
     
@@ -55,12 +51,13 @@ class Parser:NSObject, NSXMLParserDelegate {
         print ("found characters: \(string)")
         currentString = currentString + string
     }
-
+    
     
     func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        //print("elementName= \(elementName)")
         print ("currentString=\(currentString)")
         if (elementName == "Area") {
-            print("did end element Area \(currentString)")
+            print("did end element student \(currentString)")
         } else if (elementName == "areaID") {
             thisArea?.areaID = NSNumber(integer: Int(currentString)!)
         } else if(elementName == "areaInfo") {
@@ -71,19 +68,5 @@ class Parser:NSObject, NSXMLParserDelegate {
             thisArea?.mapURL = currentString
         }
         currentString = ""
-    
-        if (elementName == "Product") {
-    print("did end element Product \(currentString)")
-    } else if (elementName == "artist") {
-    thisArea?.areaID = NSNumber(integer: Int(currentString)!)
-    } else if(elementName == "areaInfo") {
-    thisArea?.areaInfo = currentString
-    } else if(elementName == "areaName") {
-    thisArea?.areaName = currentString
-    }else if(elementName == "mapURL") {
-    thisArea?.mapURL = currentString
-    }
-    currentString = ""
-
     }
 }

@@ -40,6 +40,8 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
         networkOperator.getAreaData()
         print("Area data fetched.")
         
+    
+        
     }
 
     override func didReceiveMemoryWarning() {
