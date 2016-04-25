@@ -23,7 +23,7 @@ class NetworkOperator: NSURLSession{
         //UI
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         
-        let url = NSURL(string: "http://10.112.194.239:8080/Kiasmapp-backEnd/webresources/Area")
+        let url = NSURL(string: "http://http://10.112.194.98:8080/Kiasmapp-backEnd/webresources/Area")
         
         dataTask = defaultSession.dataTaskWithURL(url!){
             data, response, error in
@@ -49,16 +49,45 @@ class NetworkOperator: NSURLSession{
         
     }
     
+    func getProductData(){
+        //UI
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+    
+        let url = NSURL(string: "http://10.112.194.98:8080/Kiasmapp-backEnd/webresources/Products")
+        
+        dataTask = defaultSession.dataTaskWithURL(url!){
+            data, response, error in
+            
+            dispatch_async(dispatch_get_main_queue()){
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            }
+            if let error = error{
+                print(error.localizedDescription)
+            }else if let httpResponse = response as? NSHTTPURLResponse{
+                if httpResponse.statusCode == 200 {
+                    print("statuscode oli 200")
+                    print(data)
+                    print(response)
+                    let parserProduct = ParserProduct()
+                    parserProduct.parse(data!)
+                    
+                    
+                }
+            }
+        }
+        dataTask?.resume()
+        
+    }
+    
 
     
     func postData(tulos:String){
         let request = NSMutableURLRequest()
    
         request.HTTPMethod = "POST"
-        request.URL = NSURL(string: "http://10.112.194.239:8080/Kiasmapp-backEnd/webresources/Visits")
+        request.URL = NSURL(string: "http://10.112.194.98:8080/Kiasmapp-backEnd/webresources/Visits")
         request.addValue("application/xml", forHTTPHeaderField: "Content-Type")
         request.addValue("application/xml", forHTTPHeaderField: "Accept")
-        
         //<?xml version=\"1.0\" encoding=\"UTF-8\"?>
         
         let body = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n <visit><time>\(tulos) </time></visit>\n"
