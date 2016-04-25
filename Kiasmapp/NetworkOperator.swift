@@ -12,7 +12,7 @@ import UIKit
 class NetworkOperator: NSURLSession{
     
     //create NSURLsession and initialize configurations
-    let defautlSession  = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+    let defaultSession  = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
     
     
     //declare data task
@@ -23,9 +23,9 @@ class NetworkOperator: NSURLSession{
         //UI
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         
-        let url = NSURL(string: "http://10.112.212.52:8080/Kiasmapp-backEnd/webresources/Area")
+        let url = NSURL(string: "http://10.112.194.239:8080/Kiasmapp-backEnd/webresources/Area")
         
-        dataTask = defautlSession.dataTaskWithURL(url!){
+        dataTask = defaultSession.dataTaskWithURL(url!){
             data, response, error in
             
             dispatch_async(dispatch_get_main_queue()){
@@ -49,7 +49,26 @@ class NetworkOperator: NSURLSession{
         
     }
     
-    
-    
-    
+    func postData(tulos:String){
+        let request = NSMutableURLRequest()
+   
+        request.HTTPMethod = "POST"
+        request.URL = NSURL(string: "http://10.112.194.239:8080/Kiasmapp-backEnd/webresources/Visits")
+        request.addValue("application/xml", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/xml", forHTTPHeaderField: "Accept")
+        
+        //<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+        
+        let body = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n <visit><time>\(tulos) </time></visit>\n"
+        
+        request.HTTPBody = body.dataUsingEncoding(NSUTF8StringEncoding)
+        print("Request made in postData()")
+        print("Tulos is \(tulos)")
+        
+        let sessionTask = defaultSession.dataTaskWithRequest(request, completionHandler: {(data, response, error) -> Void in
+            print("posting done, response = \(response), error = \(error)")
+        })
+        sessionTask.resume()
+        
+    }
 }

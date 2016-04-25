@@ -19,10 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
     
     // 2. Add a property to hold the beacon manager and instantiate it
     let beaconManager = ESTBeaconManager()
-    //let timer = TimeManager()
     let date = DateManager()
-    //let iconChanger = IconChanger()
-
     
     var visitTime = 0
     
@@ -35,7 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
         
         //Makes launchscreen last bit longer
         NSThread.sleepForTimeInterval(3)
-       
+        
+        deleteArea()
+        print("Old managed context deleted")
     
         self.beaconManager.delegate = self
         
@@ -53,7 +52,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
             UIUserNotificationSettings(forTypes: .Alert, categories: nil))
 
         return true
+        
+        
     }
+    
+
     
     func beaconManager(manager: AnyObject, didEnterRegion region: CLBeaconRegion) {
         print("HELLO YOU HAVE ENTERED THE REGION")
@@ -64,20 +67,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
         
         print("Current date: \(time1)")
         
-        
-        //iconChanger.changeIconToVisited()
 
-        
-        
-        
     }
     
     func beaconManager(manager: AnyObject, didExitRegion region: CLBeaconRegion) {
         print("GOODBYE YOU LEFT THE REGION")
         
-        let time2 = date.currentDate()
+        //Instance for posting visit time
+        let netOperator = NetworkOperator()
         
+        //Date and print only for console
+        let time2 = date.currentDate()
         print("Leave date: \(time2)")
+        
         
         var kulunutAika = NSDate().timeIntervalSinceDate(tuloAika)
         
@@ -85,7 +87,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
         
         print("User visited here \(tulos) seconds")
         
-     
+        netOperator.postData(String(tulos))
+        
+    }
+    
+    //  Delete all data from context and save it
+    func deleteArea() {
+        let fetchRequest = NSFetchRequest(entityName: "Area")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        do {
+            try persistentStoreCoordinator.executeRequest(deleteRequest, withContext: managedObjectContext)
+        } catch let error as NSError {
+            debugPrint(error)
+        }
+        saveContext()
     }
 
     func applicationWillResignActive(application: UIApplication) {

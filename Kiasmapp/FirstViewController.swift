@@ -18,15 +18,14 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
     
     @IBOutlet weak var infoButton: UIButton!
     
+    var hasVisitedArea: Bool = false
+    
     
     // 2. Add the beacon manager and the beacon region
     let beaconManager = ESTBeaconManager()
     let beaconRegion = CLBeaconRegion(
         proximityUUID: NSUUID(UUIDString: "D89ACCA5-F0FD-A90A-29D6-AF6A1E61EF63")!,
         identifier: "ranged region")
-    
-    
-    let iconChanger = IconChanger()
    
     let networkOperator = NetworkOperator()
     
@@ -39,6 +38,8 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
         self.beaconManager.requestAlwaysAuthorization()
         
         networkOperator.getAreaData()
+        print("Area data fetched.")
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -92,23 +93,27 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
             if(nearestBeacon.accuracy < 3 && nearestBeacon.accuracy > -1){
                 
                 
-                beaconIcon.image = UIImage(named:"visited")
+                if hasVisitedArea == false {
+                    beaconIcon.image = UIImage(named:"info")
+                    //TODO: should turn into true only when user has visited the info view and it should stay that way
+                    hasVisitedArea = true
+                }
+                else if hasVisitedArea == true {
+                    beaconIcon.image = UIImage(named: "visited")
+                }
+                
                 infoButton.hidden = false
             }
         }
         
+
+            }
+        }
+        
      
-    }
-            
-            
     
     
-       /* func changeIcon(){
-            if iconChanger.tellState() == true {
-                beaconIcon.image = UIImage(named:"visited")
-                infoButton.hidden = true;
-        }*/
-    }
+
 
 
     
