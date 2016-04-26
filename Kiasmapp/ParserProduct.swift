@@ -41,7 +41,7 @@ class ParserProduct:NSObject, NSXMLParserDelegate {
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         print("found element: \(elementName)")
         
-        if (elementName == "Product") {
+        if (elementName == "product") {
             print ("did start element product \(currentString)")
             thisProduct = NSEntityDescription.insertNewObjectForEntityForName("Product", inManagedObjectContext: managedContext!) as? Product
         }
