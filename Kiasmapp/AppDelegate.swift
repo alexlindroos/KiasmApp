@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
         //Makes launchscreen last bit longer
         NSThread.sleepForTimeInterval(3)
         
-        deleteArea()
+        deleteProduct()
         print("Old managed context deleted")
     
         self.beaconManager.delegate = self
@@ -92,8 +92,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
     }
     
     //  Delete all data from context and save it
-    func deleteArea() {
-        let fetchRequest = NSFetchRequest(entityName: "Area")
+    func deleteProduct() {
+        let fetchRequest = NSFetchRequest(entityName: "Product")
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         
         do {

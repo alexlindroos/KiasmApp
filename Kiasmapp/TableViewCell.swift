@@ -14,10 +14,9 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var productArtist: UILabel!
     @IBOutlet weak var productName: UILabel!
-    @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var productInfo: UITextView!
-    @IBOutlet weak var productImageURL: UILabel!
-
+    //@IBOutlet weak var productImageURL: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

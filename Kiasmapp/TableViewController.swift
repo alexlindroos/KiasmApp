@@ -66,13 +66,45 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         let product = fetchedResultsController!.objectAtIndexPath(indexPath)
         
         cell?.productArtist.text = product.valueForKey("artist") as? String
+        print(product.valueForKey("artist"))
         cell?.productName.text = product.valueForKey("productName") as? String
+        print(product.valueForKey("productName"))
         cell?.productInfo.text = product.valueForKey("productInfo") as? String
-        cell?.productImageURL.text = product.valueForKey("imageURL") as? String
-        var alex = product.valueForKey("imageURL")
-        print(alex)
+        print(product.valueForKey("productInfo"))
+        //cell?.productImageURL.text = product.valueForKey("imageURL") as? String
+        //print(product.valueForKey("imageURL"))
         
-        func loadAddresURL(){
+        //var alex = product.valueForKey("imageURL")
+        //print(alex)
+        
+        /*func load_image1(urlString:String)
+        {
+            let imgURL: NSURL = NSURL(string: urlString)!
+            let request: NSURLRequest = NSURLRequest(URL: imgURL)
+            
+            let session = NSURLSession.sharedSession()
+            let task = session.dataTaskWithRequest(request){
+                (data, response, error) -> Void in
+                
+                if (error == nil && data != nil)
+                {
+                    func display_image()
+                    {
+                        cell?.productPic.image = UIImage(data: data!)
+                    }
+                    
+                    dispatch_async(dispatch_get_main_queue(), display_image)
+                }
+                
+            }
+            
+            task.resume()
+        }
+
+         load_image1(String(alex))
+        
+ */
+        /*func loadAddresURL(){
             print("alotetaan")
             let requestURL = NSURL(string: String(alex))
             let request = NSURLRequest(URL: requestURL!)
@@ -81,7 +113,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
         
         loadAddresURL()
-
+        */
         
         
        
@@ -93,8 +125,8 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // returns number of rows for one section only
         print("********number of objects \(fetchedResultsController!.sections![ section ].numberOfObjects))")
+        print("sectioneja on \(section)")
         return fetchedResultsController!.sections![ section ].numberOfObjects
-        
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -102,6 +134,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         if let sections = fetchedResultsController?.sections {
             numberOfSections = sections.count
         }
+        print("number of sections : \(numberOfSections)")
         return numberOfSections
     }
     

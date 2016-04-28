@@ -56,8 +56,8 @@ class ParserProduct:NSObject, NSXMLParserDelegate {
     func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
       
         print ("currentString=\(currentString)")
-        if (elementName == "Product") {
-            print("did end element student \(currentString)")
+        if (elementName == "product") {
+            print("did end element product \(currentString)")
         } else if(elementName == "artist") {
             thisProduct?.artist = currentString
         }else if(elementName == "imageURL") {

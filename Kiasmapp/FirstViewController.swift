@@ -26,8 +26,6 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
     let beaconRegion = CLBeaconRegion(
         proximityUUID: NSUUID(UUIDString: "D89ACCA5-F0FD-A90A-29D6-AF6A1E61EF63")!,
         identifier: "ranged region")
-   
-    let networkOperator = NetworkOperator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,13 +34,6 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
      
         // 4. We need to request this authorization for every beacon manager
         self.beaconManager.requestAlwaysAuthorization()
-        
-        networkOperator.getAreaData()
-        print("Area data fetched.")
-        
-        networkOperator.getProductData()
-        print("Product data fetched")
-    
         
     }
 
