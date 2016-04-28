@@ -16,6 +16,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     var fetchedResultsController: NSFetchedResultsController!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,7 +26,6 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        //loadAddresURL()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -71,55 +71,41 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         print(product.valueForKey("productName"))
         cell?.productInfo.text = product.valueForKey("productInfo") as? String
         print(product.valueForKey("productInfo"))
-        //cell?.productImageURL.text = product.valueForKey("imageURL") as? String
-        //print(product.valueForKey("imageURL"))
         
-        //var alex = product.valueForKey("imageURL")
-        //print(alex)
+        //var imageURL = product.valueForKey("imageURL") as? String
         
-        /*func load_image1(urlString:String)
-        {
-            let imgURL: NSURL = NSURL(string: urlString)!
-            let request: NSURLRequest = NSURLRequest(URL: imgURL)
-            
-            let session = NSURLSession.sharedSession()
-            let task = session.dataTaskWithRequest(request){
-                (data, response, error) -> Void in
-                
-                if (error == nil && data != nil)
-                {
-                    func display_image()
-                    {
-                        cell?.productPic.image = UIImage(data: data!)
-                    }
-                    
-                    dispatch_async(dispatch_get_main_queue(), display_image)
-                }
-                
-            }
-            
-            task.resume()
-        }
-
-         load_image1(String(alex))
-        
- */
-        /*func loadAddresURL(){
+        var url = product.valueForKey("imageURL") as? String
+        print(url)
+ 
+        func loadAddresURL(){
             print("alotetaan")
-            let requestURL = NSURL(string: String(alex))
+            let requestURL = NSURL(string: String(url!))
             let request = NSURLRequest(URL: requestURL!)
             cell?.webView.loadRequest(request)
             print("lähtiks tää toimii ikinä")
         }
         
         loadAddresURL()
-        */
-        
+ 
+ 
         
        
         return cell!
     }
+ 
     
+  /*
+     /*func loadAddresURL(){
+     print("alotetaan")
+     let requestURL = NSURL(string: String(alex))
+     let request = NSURLRequest(URL: requestURL!)
+     cell?.webView.loadRequest(request)
+     print("lähtiks tää toimii ikinä")
+     }
+     
+     loadAddresURL()
+     */
+*/
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -146,6 +132,17 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Dispose of any resources that can be recreated.
     }
     
+
+    var hasVisitedArea: Bool!
+    
+    
+    //pass a value to firstViewController
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "segueHasVisited") {
+            let svc = segue.destinationViewController as! FirstViewController
+            svc.hasVisitedArea = true
+        }
+    }
     
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
         //setting this ViewController as the delegate for fetchedResults controller and

@@ -17,6 +17,7 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
     
     
     @IBOutlet weak var infoButton: UIButton!
+
     
     var hasVisitedArea: Bool = false
     
@@ -31,12 +32,12 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
         super.viewDidLoad()
         // 3. Set the beacon manager's delegate
         self.beaconManager.delegate = self
-     
+        
         // 4. We need to request this authorization for every beacon manager
         self.beaconManager.requestAlwaysAuthorization()
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -81,7 +82,7 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
         print("This many beacons in region: \(beacons.count)")
         if let nearestBeacon = beacons.first {
             let places = placesNearBeacon(nearestBeacon)
-        
+            
             print(places)
             print(nearestBeacon.accuracy)
             
@@ -90,8 +91,7 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
                 
                 if hasVisitedArea == false {
                     beaconIcon.image = UIImage(named:"info")
-                    //TODO: should turn into true only when user has visited the info view and it should stay that way
-                    hasVisitedArea = true
+                    
                 }
                 else if hasVisitedArea == true {
                     beaconIcon.image = UIImage(named: "visited")
@@ -101,19 +101,23 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
             }
         }
         
-
-            }
-        }
         
-     
-    
-    
+    }
+   /* @IBAction func hasVisitedArea(sender: UIButton) {
+        hasVisitedArea = true
+    }
+*/
+}
 
 
 
-    
-   
-    
-    
+
+
+
+
+
+
+
+
 
 

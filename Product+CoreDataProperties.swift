@@ -2,7 +2,7 @@
 //  Product+CoreDataProperties.swift
 //  Kiasmapp
 //
-//  Created by iosdev on 21.4.2016.
+//  Created by iosdev on 28.4.2016.
 //  Copyright © 2016 Alex Lindroos. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu

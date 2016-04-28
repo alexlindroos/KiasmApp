@@ -21,9 +21,9 @@
 		572741951CCF72CF00BB0100 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572741941CCF72CF00BB0100 /* TableViewController.swift */; };
 		572741971CCF744E00BB0100 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572741961CCF744E00BB0100 /* TableViewCell.swift */; };
 		577BF3BC1CCE353B000BEB89 /* ParserProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BF3BB1CCE353B000BEB89 /* ParserProduct.swift */; };
+		6AA8298E1CD21B6D00FC1F73 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA8298D1CD21B6D00FC1F73 /* Product+CoreDataProperties.swift */; };
 		6AC291FD1CC66A5D000FC759 /* NetworkOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC291FC1CC66A5D000FC759 /* NetworkOperator.swift */; };
 		6AC292011CC8BAE3000FC759 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC292001CC8BAE3000FC759 /* Parser.swift */; };
-		6AC292491CC8CCA1000FC759 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC292411CC8CCA1000FC759 /* Product+CoreDataProperties.swift */; };
 		6AC2924A1CC8CCA1000FC759 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC292421CC8CCA1000FC759 /* Product.swift */; };
 		6AC2924B1CC8CCA1000FC759 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC292431CC8CCA1000FC759 /* User+CoreDataProperties.swift */; };
 		6AC2924C1CC8CCA1000FC759 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC292441CC8CCA1000FC759 /* User.swift */; };
@@ -72,9 +72,9 @@
 		572741941CCF72CF00BB0100 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		572741961CCF744E00BB0100 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		577BF3BB1CCE353B000BEB89 /* ParserProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserProduct.swift; sourceTree = "<group>"; };
+		6AA8298D1CD21B6D00FC1F73 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Product+CoreDataProperties.swift"; path = "../Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6AC291FC1CC66A5D000FC759 /* NetworkOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperator.swift; sourceTree = "<group>"; };
 		6AC292001CC8BAE3000FC759 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		6AC292411CC8CCA1000FC759 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Product+CoreDataProperties.swift"; path = "../Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6AC292421CC8CCA1000FC759 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Product.swift; path = ../Product.swift; sourceTree = "<group>"; };
 		6AC292431CC8CCA1000FC759 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "../User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6AC292441CC8CCA1000FC759 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../User.swift; sourceTree = "<group>"; };
@@ -179,7 +179,7 @@
 		5713E5431CBB8DB800AEB69B /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				6AC292411CC8CCA1000FC759 /* Product+CoreDataProperties.swift */,
+				6AA8298D1CD21B6D00FC1F73 /* Product+CoreDataProperties.swift */,
 				6AC292421CC8CCA1000FC759 /* Product.swift */,
 				6AC292431CC8CCA1000FC759 /* User+CoreDataProperties.swift */,
 				6AC292441CC8CCA1000FC759 /* User.swift */,
@@ -326,7 +326,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AC2924C1CC8CCA1000FC759 /* User.swift in Sources */,
-				6AC292491CC8CCA1000FC759 /* Product+CoreDataProperties.swift in Sources */,
 				6ACE0E551CBFCDE5007A6B11 /* DateManager.swift in Sources */,
 				6AC2924B1CC8CCA1000FC759 /* User+CoreDataProperties.swift in Sources */,
 				572741971CCF744E00BB0100 /* TableViewCell.swift in Sources */,
@@ -334,6 +333,7 @@
 				577BF3BC1CCE353B000BEB89 /* ParserProduct.swift in Sources */,
 				6AC292501CC8CCA1000FC759 /* Beacon.swift in Sources */,
 				572741951CCF72CF00BB0100 /* TableViewController.swift in Sources */,
+				6AA8298E1CD21B6D00FC1F73 /* Product+CoreDataProperties.swift in Sources */,
 				6AC291FD1CC66A5D000FC759 /* NetworkOperator.swift in Sources */,
 				6AC2924A1CC8CCA1000FC759 /* Product.swift in Sources */,
 				570859691CBA902E001A31F2 /* AppDelegate.swift in Sources */,
