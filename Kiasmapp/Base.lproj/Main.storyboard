@@ -30,9 +30,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="496" width="380" height="168"/>
+                                    <rect key="frame" x="0.0" y="509" width="380" height="155"/>
                                 </variation>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kiasmaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="qCj-ym-4ch">
+                                <rect key="frame" x="97" y="98" width="32" height="30"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="143" y="57" width="32" height="30"/>
+                                </variation>
+                            </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ps-t7-fk0">
                                 <rect key="frame" x="90" y="438" width="202" height="30"/>
                                 <color key="backgroundColor" red="0.99215686274509807" green="0.0" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
@@ -66,22 +72,27 @@
                                     <rect key="frame" x="45" y="443" width="291" height="39"/>
                                 </variation>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kiasmaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="qCj-ym-4ch">
-                                <rect key="frame" x="97" y="98" width="32" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kiasman kokoelmanäyttely" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRr-na-V9N">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="143" y="57" width="32" height="30"/>
+                                    <rect key="frame" x="5" y="495" width="245" height="21"/>
                                 </variation>
-                            </imageView>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="9rm-ee-hSf"/>
+                                <exclude reference="JRr-na-V9N"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="9rm-ee-hSf"/>
+                                <include reference="JRr-na-V9N"/>
                             </mask>
                         </variation>
                     </view>
