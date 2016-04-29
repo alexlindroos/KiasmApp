@@ -113,6 +113,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         //6. add a notification to show up whenever user enters the range of our monitored beacon. TODO: broken
+        
         func beaconManager(manager: AnyObject, didEnterRegion region: CLBeaconRegion) {
             let notification = UILocalNotification()
             notification.alertBody =

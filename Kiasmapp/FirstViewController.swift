@@ -18,6 +18,7 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
     
     @IBOutlet weak var infoButton: UIButton!
 
+    @IBOutlet weak var beaconButton: UIButton!
     
     var hasVisitedArea: Bool = false
     let appDelegate = AppDelegate()
@@ -93,6 +94,7 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
             if(nearestBeacon.accuracy < 4 && nearestBeacon.accuracy > -1){
                 
                 infoButton.hidden = false
+                beaconButton.hidden = true
                 
                 if hasVisitedArea == false {
                     beaconIcon.image = UIImage(named:"info")
