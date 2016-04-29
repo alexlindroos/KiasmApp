@@ -20,6 +20,7 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
 
     
     var hasVisitedArea: Bool = false
+    let appDelegate = AppDelegate()
     
     
     // 2. Add the beacon manager and the beacon region
@@ -49,6 +50,9 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
         super.viewWillAppear(animated)
         self.beaconManager.startRangingBeaconsInRegion(self.beaconRegion)
         self.beaconManager.startMonitoringForRegion(self.beaconRegion)
+        
+        appDelegate.deleteProduct()
+        print("Old managed context deleted")
     }
     
     // 6. View did disappear
@@ -86,18 +90,20 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
             print(places)
             print(nearestBeacon.accuracy)
             
-            if(nearestBeacon.accuracy < 3 && nearestBeacon.accuracy > -1){
+            if(nearestBeacon.accuracy < 4 && nearestBeacon.accuracy > -1){
                 
+                infoButton.hidden = false
                 
                 if hasVisitedArea == false {
                     beaconIcon.image = UIImage(named:"info")
+                    
                     
                 }
                 else if hasVisitedArea == true {
                     beaconIcon.image = UIImage(named: "visited")
                 }
                 
-                infoButton.hidden = false
+                
             }
         }
         

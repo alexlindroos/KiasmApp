@@ -23,7 +23,7 @@ class NetworkOperator: NSURLSession{
         //UI
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         
-        let url = NSURL(string: "http://192.168.43.27:8080/Kiasmapp-backEnd/webresources/Area")
+        let url = NSURL(string: "http://10.112.196.72:8080/Kiasmapp-backEnd/webresources/Area")
         
         dataTask = defaultSession.dataTaskWithURL(url!){
             data, response, error in
@@ -53,7 +53,7 @@ class NetworkOperator: NSURLSession{
         //UI
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
     
-        let url = NSURL(string: "http://192.168.43.27:8080/Kiasmapp-backEnd/webresources/Products")
+        let url = NSURL(string: "http://10.112.196.72:8080/Kiasmapp-backEnd/webresources/Products")
         
         dataTask = defaultSession.dataTaskWithURL(url!){
             data, response, error in
@@ -85,7 +85,7 @@ class NetworkOperator: NSURLSession{
         let request = NSMutableURLRequest()
    
         request.HTTPMethod = "POST"
-        request.URL = NSURL(string: "http://192.168.43.27:8080/Kiasmapp-backEnd/webresources/Visits")
+        request.URL = NSURL(string: "http://10.112.196.72:8080/Kiasmapp-backEnd/webresources/Visits")
         request.addValue("application/xml", forHTTPHeaderField: "Content-Type")
         request.addValue("application/xml", forHTTPHeaderField: "Accept")
         //<?xml version=\"1.0\" encoding=\"UTF-8\"?>
