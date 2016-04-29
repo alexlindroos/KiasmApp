@@ -54,7 +54,7 @@ class Parser:NSObject, NSXMLParserDelegate {
     
     
     func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        //print("elementName= \(elementName)")
+        
         print ("currentString=\(currentString)")
         if (elementName == "Area") {
             print("did end element student \(currentString)")

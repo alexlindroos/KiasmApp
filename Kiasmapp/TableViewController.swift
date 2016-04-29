@@ -71,8 +71,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         print(product.valueForKey("productName"))
         cell?.productInfo.text = product.valueForKey("productInfo") as? String
         print(product.valueForKey("productInfo"))
-        
-        //var imageURL = product.valueForKey("imageURL") as? String
+      
         
         var url = product.valueForKey("imageURL") as? String
         print(url)
@@ -93,21 +92,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell!
     }
  
-    
-  /*
-     /*func loadAddresURL(){
-     print("alotetaan")
-     let requestURL = NSURL(string: String(alex))
-     let request = NSURLRequest(URL: requestURL!)
-     cell?.webView.loadRequest(request)
-     print("lähtiks tää toimii ikinä")
-     }
-     
-     loadAddresURL()
-     */
-*/
-    
-    
+  
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // returns number of rows for one section only
         print("********number of objects \(fetchedResultsController!.sections![ section ].numberOfObjects))")

@@ -109,10 +109,7 @@ class FirstViewController: UIViewController, ESTBeaconManagerDelegate{
         
         
     }
-   /* @IBAction func hasVisitedArea(sender: UIButton) {
-        hasVisitedArea = true
-    }
-*/
+
 }
 
 

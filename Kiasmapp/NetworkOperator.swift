@@ -88,7 +88,7 @@ class NetworkOperator: NSURLSession{
         request.URL = NSURL(string: "http://10.112.196.72:8080/Kiasmapp-backEnd/webresources/Visits")
         request.addValue("application/xml", forHTTPHeaderField: "Content-Type")
         request.addValue("application/xml", forHTTPHeaderField: "Accept")
-        //<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+        
         
         let body = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n <visit><time>\(tulos) </time></visit>\n"
         
