@@ -1,9 +1,5 @@
 # Kiasmapp #
 
-![Screen Shot 2016-05-02 at 12.08.12.png](https://bitbucket.org/repo/eB9558/images/246407723-Screen%20Shot%202016-05-02%20at%2012.08.12.png)
-
-![Screen Shot 2016-05-02 at 12.08.21.png](https://bitbucket.org/repo/eB9558/images/2571452467-Screen%20Shot%202016-05-02%20at%2012.08.21.png)
-
 This is an application for getting information about Kiasma's exhibitions. It is a school project in Metropolia University of Applied Sciences, Mobile Solutions major in spring 2016.
 
 ## Description ##
@@ -19,3 +15,7 @@ You need an XCode and Netbeans. Xcode for the code and Netbeans for the backend.
 **v1.0.0**
 
 * Demo release.
+
+![Screen Shot 2016-05-02 at 12.08.12.png](https://bitbucket.org/repo/eB9558/images/246407723-Screen%20Shot%202016-05-02%20at%2012.08.12.png)
+
+![Screen Shot 2016-05-02 at 12.08.21.png](https://bitbucket.org/repo/eB9558/images/2571452467-Screen%20Shot%202016-05-02%20at%2012.08.21.png)
