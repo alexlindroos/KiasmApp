@@ -29,6 +29,3 @@ You need an XCode and Netbeans. Xcode for the code and Netbeans for the backend.
 * In week 4 we took major steps with the project. We set up Trello workspace and started implementing Scrum to our project. We created our first data model and storyboard of views the application can detect all beacons in its proximity and show the nearest one.
 
 
-![Screen Shot 2016-05-02 at 12.08.12.png](https://bitbucket.org/repo/eB9558/images/246407723-Screen%20Shot%202016-05-02%20at%2012.08.12.png)
-
-![Screen Shot 2016-05-02 at 12.08.21.png](https://bitbucket.org/repo/eB9558/images/2571452467-Screen%20Shot%202016-05-02%20at%2012.08.21.png)
